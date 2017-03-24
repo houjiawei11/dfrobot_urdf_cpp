@@ -1,0 +1,3 @@
+use:
+$ roslaunch testbot_description display.launch model:='$(find testbot_description)/urdf/df_add_wheel.urdf' gui:=True
+
