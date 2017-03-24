@@ -1,0 +1,119 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"front_board" [label="front_board"];
+"left_board" [label="left_board"];
+"left_board_back" [label="left_board_back"];
+"left_stick1" [label="left_stick1"];
+"left_stick2" [label="left_stick2"];
+"left_stick3" [label="left_stick3"];
+"stick_left_motor" [label="stick_left_motor"];
+"left_board_front" [label="left_board_front"];
+"tyer_slave_left_axis5" [label="tyer_slave_left_axis5"];
+"tyer_slave5_left" [label="tyer_slave5_left"];
+"tyer_master_left_axis" [label="tyer_master_left_axis"];
+"tyer_master_left" [label="tyer_master_left"];
+"top_board" [label="top_board"];
+"tyer_master_left_motor" [label="tyer_master_left_motor"];
+"tyer_slave_left_axis2" [label="tyer_slave_left_axis2"];
+"tyer_slave2_left" [label="tyer_slave2_left"];
+"tyer_slave_left_axis3" [label="tyer_slave_left_axis3"];
+"tyer_slave3_left" [label="tyer_slave3_left"];
+"tyer_slave_left_axis4" [label="tyer_slave_left_axis4"];
+"tyer_slave4_left" [label="tyer_slave4_left"];
+"right_board" [label="right_board"];
+"right_board_back" [label="right_board_back"];
+"right_stick1" [label="right_stick1"];
+"right_stick2" [label="right_stick2"];
+"right_stick3" [label="right_stick3"];
+"stick_right_motor" [label="stick_right_motor"];
+"tyer_master_right_axis" [label="tyer_master_right_axis"];
+"tyer_master_right" [label="tyer_master_right"];
+"right_board_front" [label="right_board_front"];
+"tyer_slave_right_axis5" [label="tyer_slave_right_axis5"];
+"tyer_slave5_right" [label="tyer_slave5_right"];
+"tyer_master_right_motor" [label="tyer_master_right_motor"];
+"tyer_slave_right_axis2" [label="tyer_slave_right_axis2"];
+"tyer_slave2_right" [label="tyer_slave2_right"];
+"tyer_slave_right_axis3" [label="tyer_slave_right_axis3"];
+"tyer_slave3_right" [label="tyer_slave3_right"];
+"tyer_slave_right_axis4" [label="tyer_slave_right_axis4"];
+"tyer_slave4_right" [label="tyer_slave4_right"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "base_to_front_board" [label="xyz: 0.047 0 0.027 \nrpy: 0 1.0178 0"]
+"base_to_front_board" -> "front_board"
+"base_link" -> "base_to_left_board" [label="xyz: -0.047 0.069 0.007 \nrpy: 0 -0 0"]
+"base_to_left_board" -> "left_board"
+"left_board" -> "base_to_left_leg_back" [label="xyz: -0.1 0 -0.005 \nrpy: 0 -0 0"]
+"base_to_left_leg_back" -> "left_board_back"
+"left_board_back" -> "left_board_back_to_left_stick1" [label="xyz: 0 0.004 0 \nrpy: -1.57075 0 0"]
+"left_board_back_to_left_stick1" -> "left_stick1"
+"left_stick1" -> "left_stick1_to_left_stick2" [label="xyz: 0 -0.027 0.003 \nrpy: 1.57075 -0 0"]
+"left_stick1_to_left_stick2" -> "left_stick2"
+"left_stick2" -> "left_stick2_to_left_stick3" [label="xyz: 0.1035 0 0.027 \nrpy: 0 1.57075 0"]
+"left_stick2_to_left_stick3" -> "left_stick3"
+"left_board_back" -> "left_board_to_stick_left_motor" [label="xyz: 0 -0.024 0 \nrpy: 0 -0 0"]
+"left_board_to_stick_left_motor" -> "stick_left_motor"
+"left_board" -> "left_board_to_left_board_front" [label="xyz: 0.095 0 0 \nrpy: 0 -0 0"]
+"left_board_to_left_board_front" -> "left_board_front"
+"left_board_front" -> "left_leg_to_slave_left_axix5" [label="xyz: 0.005 0.016 0 \nrpy: 1.57075 -0 0"]
+"left_leg_to_slave_left_axix5" -> "tyer_slave_left_axis5"
+"tyer_slave_left_axis5" -> "left_leg_to_slave5_left" [label="xyz: 0 0 -0.015 \nrpy: 0 -0 0"]
+"left_leg_to_slave5_left" -> "tyer_slave5_left"
+"left_board" -> "left_board_to_master_left_axis" [label="xyz: -0.005 0.016 0.026 \nrpy: 1.57075 -0 0"]
+"left_board_to_master_left_axis" -> "tyer_master_left_axis"
+"tyer_master_left_axis" -> "tyer_master_left_axis_to_master_left" [label="xyz: 0 0 -0.015 \nrpy: 0 -0 0"]
+"tyer_master_left_axis_to_master_left" -> "tyer_master_left"
+"left_board" -> "left_board_to_top_board" [label="xyz: 0 -0.069 0.04 \nrpy: 0 -0 0"]
+"left_board_to_top_board" -> "top_board"
+"left_board" -> "left_leg_to_master_left_motor" [label="xyz: -0.005 -0.025 0.026 \nrpy: 0 -0 0"]
+"left_leg_to_master_left_motor" -> "tyer_master_left_motor"
+"left_board" -> "left_leg_to_slave_left_axix2" [label="xyz: 0 0.016 -0.03 \nrpy: 1.57075 -0 0"]
+"left_leg_to_slave_left_axix2" -> "tyer_slave_left_axis2"
+"tyer_slave_left_axis2" -> "left_leg_to_slave2_left" [label="xyz: 0 0 -0.015 \nrpy: 0 -0 0"]
+"left_leg_to_slave2_left" -> "tyer_slave2_left"
+"left_board" -> "left_leg_to_slave_left_axix3" [label="xyz: 0.06 0.016 -0.03 \nrpy: 1.57075 -0 0"]
+"left_leg_to_slave_left_axix3" -> "tyer_slave_left_axis3"
+"tyer_slave_left_axis3" -> "left_leg_to_slave3_left" [label="xyz: 0 0 -0.015 \nrpy: 0 -0 0"]
+"left_leg_to_slave3_left" -> "tyer_slave3_left"
+"left_board" -> "right_leg_to_slave_left_axix4" [label="xyz: -0.06 0.016 -0.03 \nrpy: 1.57075 -0 0"]
+"right_leg_to_slave_left_axix4" -> "tyer_slave_left_axis4"
+"tyer_slave_left_axis4" -> "left_leg_to_slave4_left" [label="xyz: 0 0 -0.015 \nrpy: 0 -0 0"]
+"left_leg_to_slave4_left" -> "tyer_slave4_left"
+"base_link" -> "base_to_right_board" [label="xyz: -0.047 -0.069 0.007 \nrpy: 0 -0 0"]
+"base_to_right_board" -> "right_board"
+"right_board" -> "base_to_right_leg_back" [label="xyz: -0.1 0 -0.005 \nrpy: 0 -0 0"]
+"base_to_right_leg_back" -> "right_board_back"
+"right_board_back" -> "right_board_back_to_right_stick1" [label="xyz: 0 -0.004 0 \nrpy: 1.57075 -0 0"]
+"right_board_back_to_right_stick1" -> "right_stick1"
+"right_stick1" -> "right_stick1_to_right_stick2" [label="xyz: 0 0.027 0.003 \nrpy: -1.57075 0 0"]
+"right_stick1_to_right_stick2" -> "right_stick2"
+"right_stick2" -> "right_stick2_to_right_stick3" [label="xyz: 0.1035 0 0.027 \nrpy: 0 1.57075 0"]
+"right_stick2_to_right_stick3" -> "right_stick3"
+"right_board_back" -> "right_board_to_stick_right_motor" [label="xyz: 0 0.024 0 \nrpy: 0 -0 0"]
+"right_board_to_stick_right_motor" -> "stick_right_motor"
+"right_board" -> "right_board_to_master_right_axix" [label="xyz: -0.005 -0.016 0.026 \nrpy: 1.57075 -0 0"]
+"right_board_to_master_right_axix" -> "tyer_master_right_axis"
+"tyer_master_right_axis" -> "right_leg_to_master_right" [label="xyz: 0 0 0.015 \nrpy: 0 -0 0"]
+"right_leg_to_master_right" -> "tyer_master_right"
+"right_board" -> "right_board_to_right_board_front" [label="xyz: 0.095 0 0 \nrpy: 0 -0 0"]
+"right_board_to_right_board_front" -> "right_board_front"
+"right_board_front" -> "right_leg_to_slave_right_axix5" [label="xyz: 0.005 -0.016 0 \nrpy: 1.57075 -0 0"]
+"right_leg_to_slave_right_axix5" -> "tyer_slave_right_axis5"
+"tyer_slave_right_axis5" -> "right_leg_to_slave5_right" [label="xyz: 0 0 0.015 \nrpy: 0 -0 0"]
+"right_leg_to_slave5_right" -> "tyer_slave5_right"
+"right_board" -> "right_leg_to_master_right_motor" [label="xyz: -0.005 0.025 0.026 \nrpy: 0 -0 0"]
+"right_leg_to_master_right_motor" -> "tyer_master_right_motor"
+"right_board" -> "right_leg_to_slave_right_axix2" [label="xyz: 0 -0.016 -0.03 \nrpy: 1.57075 -0 0"]
+"right_leg_to_slave_right_axix2" -> "tyer_slave_right_axis2"
+"tyer_slave_right_axis2" -> "right_leg_to_slave2_right" [label="xyz: 0 0 0.015 \nrpy: 0 -0 0"]
+"right_leg_to_slave2_right" -> "tyer_slave2_right"
+"right_board" -> "right_leg_to_slave_right_axix3" [label="xyz: 0.06 -0.016 -0.03 \nrpy: 1.57075 -0 0"]
+"right_leg_to_slave_right_axix3" -> "tyer_slave_right_axis3"
+"tyer_slave_right_axis3" -> "right_leg_to_slave3_right" [label="xyz: 0 0 0.015 \nrpy: 0 -0 0"]
+"right_leg_to_slave3_right" -> "tyer_slave3_right"
+"right_board" -> "right_leg_to_slave_right_axix4" [label="xyz: -0.06 -0.016 -0.03 \nrpy: 1.57075 -0 0"]
+"right_leg_to_slave_right_axix4" -> "tyer_slave_right_axis4"
+"tyer_slave_right_axis4" -> "right_leg_to_slave4_right" [label="xyz: 0 0 0.015 \nrpy: 0 -0 0"]
+"right_leg_to_slave4_right" -> "tyer_slave4_right"
+}
